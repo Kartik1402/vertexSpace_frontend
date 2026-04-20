@@ -1,0 +1,9 @@
+.adminMain{
+  margin-left: 264px;            /* sidebar width */
+  padding: 24px;
+  min-height: calc(100vh - 64px); /* header height */
+}
+
+@media (max-width: 980px){
+  .adminMain{ margin-left: 0; }
+}

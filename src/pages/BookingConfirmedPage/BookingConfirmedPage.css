@@ -1,0 +1,24 @@
+.bc { min-height: 100vh; display:flex; align-items:center; justify-content:center; padding: 22px; background:#f6f8fc; }
+.bc__card { width: min(820px, 100%); background:#fff; border:1px solid #e8eef6; border-radius: 18px; padding: 22px; text-align:center; }
+.bc__check { width: 64px; height: 64px; margin: 0 auto 10px; border-radius: 999px; background:#ecfdf3; border:1px solid #abefc6; color:#067647; display:flex; align-items:center; justify-content:center; font-weight: 950; font-size: 28px; }
+.bc__title { font-weight: 950; color:#0f172a; font-size: 22px; }
+.bc__sub { color:#64748b; font-weight: 700; margin-top: 6px; }
+
+.bc__box { margin-top: 16px; text-align:left; border:1px solid #eef2f7; border-radius: 16px; padding: 16px; background:#fbfdff; }
+.bc__name { font-weight: 950; color:#0f172a; font-size: 18px; }
+.bc__meta { display:flex; gap: 10px; align-items:center; margin-top: 8px; }
+.bc__pill { display:inline-flex; height:24px; align-items:center; padding:0 10px; border-radius:999px; font-size:11px; font-weight:950; background:#eef2ff; border:1px solid #dbe6ff; color:#1d4ed8; }
+.bc__muted { color:#64748b; font-weight: 800; font-size: 12px; }
+
+.bc__grid { display:grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
+.bc__label { color:#94a3b8; font-weight: 900; font-size: 11px; }
+.bc__value { color:#0f172a; font-weight: 800; margin-top: 3px; }
+
+.bc__actions { display:grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+.bc__btn { height: 44px; border-radius: 12px; border:1px solid #e2e8f0; background:#fff; font-weight: 950; cursor:pointer; }
+.bc__btn--primary { background:#16a34a; border-color:#16a34a; color:#fff; }
+
+@media (max-width: 720px) {
+  .bc__grid { grid-template-columns: 1fr; }
+  .bc__actions { grid-template-columns: 1fr; }
+}

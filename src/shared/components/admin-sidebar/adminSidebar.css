@@ -1,0 +1,106 @@
+.adminSide{
+  position: fixed;
+  left: 0;
+  top: 64px;              /* matches your admin header height */
+  bottom: 0;
+  width: 264px;
+  background: #FFFFFF;
+  border-right: 1px solid #E8EEF6;
+  z-index: 40;
+}
+
+.adminSide__inner{
+  height: 100%;
+  padding: 18px 14px;
+  overflow: auto;
+}
+
+.adminSide__section{
+  display: grid;
+  gap: 8px;
+}
+
+.adminSide__heading{
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #64748B;
+  font-weight: 950;
+  padding: 10px 10px 6px 10px;
+}
+
+.adminSide__divider{
+  height: 1px;
+  background: #F1F5F9;
+  margin: 14px 8px;
+}
+
+.adminSide__item{
+  height: 44px;
+  border-radius: 12px;
+  padding: 0 10px;
+  display: grid;
+  grid-template-columns: 26px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  color: #0F172A;
+  text-decoration: none;
+  border: 1px solid transparent;
+  background: transparent;
+}
+
+.adminSide__item:hover{
+  background: #F7F9FC;
+  border-color: #EEF2F7;
+}
+
+.adminSide__item.isActive{
+  background: rgba(26,92,255,.10);
+  border-color: rgba(26,92,255,.22);
+  color: #1A5CFF;
+}
+
+.adminSide__itemBtn{
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
+}
+
+.adminSide__itemBtn.isDisabled,
+.adminSide__itemBtn:disabled{
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+.adminSide__icon{
+  display: grid;
+  place-items: center;
+  color: #475569;
+}
+
+.adminSide__item.isActive .adminSide__icon{
+  color: #1A5CFF;
+}
+
+.adminSide__label{
+  font-weight: 900;
+  font-size: 13px;
+  color: inherit;
+}
+
+.adminSide__endIcon{
+  display: grid;
+  place-items: center;
+  color: #64748B;
+}
+
+/* responsive: collapse to top (optional) */
+@media (max-width: 980px){
+  .adminSide{
+    position: static;
+    width: 100%;
+    top: auto;
+    border-right: 0;
+    border-bottom: 1px solid #E8EEF6;
+  }
+}

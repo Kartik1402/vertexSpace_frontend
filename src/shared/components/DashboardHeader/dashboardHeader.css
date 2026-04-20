@@ -1,0 +1,273 @@
+.dashHeader {
+  height: 64px;
+  background: #fff;
+  border-bottom: 1px solid #e8eef6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+.dashHeader__left {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  min-width: 0;
+}
+
+.dashHeader__brandWrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dashHeader__logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: #1a5cff;
+}
+
+.dashHeader__brand {
+  font-weight: 700;
+  font-size: 18px;
+  color: #0f172a;
+  white-space: nowrap;
+}
+
+.dashHeader__nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.dashHeader__tab {
+  position: relative;
+  border: 0;
+  background: transparent;
+  padding: 10px 6px;
+  font-size: 14px;
+  color: #334155;
+  cursor: default;
+  opacity: 1;
+}
+
+.dashHeader__tab.isActive {
+  color: #1a5cff;
+  font-weight: 600;
+}
+
+.dashHeader__tab.isActive::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  bottom: 4px;
+  height: 2px;
+  background: #1a5cff;
+  border-radius: 2px;
+}
+
+.dashHeader__right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.dashHeader__iconBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid #e8eef6;
+  background: #fff;
+  cursor: default;
+  position: relative;
+}
+
+.dashHeader__bell {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  background: #64748b;
+  -webkit-mask: radial-gradient(circle at 50% 30%, transparent 9px, #000 9px) top/100% 70% no-repeat,
+    linear-gradient(#000, #000) bottom/60% 30% no-repeat;
+  mask: radial-gradient(circle at 50% 30%, transparent 9px, #000 9px) top/100% 70% no-repeat,
+    linear-gradient(#000, #000) bottom/60% 30% no-repeat;
+}
+
+.dashHeader__badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: #ef4444;
+  color: #fff;
+  font-size: 11px;
+  line-height: 18px;
+  text-align: center;
+  border: 2px solid #fff;
+}
+
+.dashHeader__divider {
+  width: 1px;
+  height: 28px;
+  background: #e8eef6;
+}
+
+.dashHeader__profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dashHeader__profileText {
+  text-align: right;
+  line-height: 1.1;
+}
+
+.dashHeader__name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.dashHeader__subLabel {
+  font-size: 11px;
+  color: #64748b;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.dashHeader__avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  border: 1px solid #e8eef6;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #0f172a;
+}
+.dashHeader__recBtn{
+  height: 36px;
+  padding: 0 12px;
+  border-radius: 12px;
+  border: 1px solid #E8EEF6;
+  background: #1A5CFF;
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+  margin-left: 10px;
+  white-space: nowrap;
+}
+
+.dashHeader__recBtn:hover{
+  filter: brightness(0.98);
+}
+
+.dashHeader__recBtn:active{
+  transform: translateY(1px);
+}
+
+/* ===== Profile dropdown (Logout) ===== */
+.dashHeader__menuWrap{
+  position: relative;
+}
+
+/* Make profile clickable without changing layout */
+.dashHeader__profile{
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: 0; /* keep your existing spacing rules from inner elements */
+}
+
+.dashHeader__profile:hover{
+  background: rgba(15,23,42,.04);
+  border-radius: 14px;
+}
+
+.dashHeader__profile:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(26,92,255,.18);
+  border-radius: 14px;
+}
+
+/* Dropdown panel */
+.dashHeader__menu{
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  min-width: 200px;
+  background: #fff;
+  border: 1px solid rgba(232,238,246,1);
+  border-radius: 14px;
+  box-shadow: 0 18px 40px rgba(15,23,42,.16);
+  padding: 8px;
+  z-index: 2000;
+  transform-origin: top right;
+  animation: dashHeaderPop .12s ease-out;
+}
+
+@keyframes dashHeaderPop{
+  from{ opacity: 0; transform: translateY(-6px) scale(.98); }
+  to{ opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Small arrow */
+.dashHeader__menu::before{
+  content: "";
+  position: absolute;
+  right: 14px;
+  top: -6px;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-left: 1px solid rgba(232,238,246,1);
+  border-top: 1px solid rgba(232,238,246,1);
+  transform: rotate(45deg);
+}
+
+/* Menu item button */
+.dashHeader__menuItem{
+  width: 100%;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  padding: 10px 10px;
+  border-radius: 12px;
+  color: #0F172A;
+  font-weight: 800;
+  font-size: 13px;
+  transition: background .12s ease, color .12s ease;
+}
+
+.dashHeader__menuItem:hover{
+  background: rgba(15,23,42,.04);
+}
+
+.dashHeader__menuItem:disabled{
+  cursor: not-allowed;
+  opacity: .65;
+}
+
+/* Logout emphasis */
+.dashHeader__menuItem--danger{
+  color: #991B1B;
+}
+
+.dashHeader__menuItem--danger:hover{
+  background: rgba(218,41,28,.10);
+}
+
+@media (max-width: 980px){
+  .dashHeader__recBtn{ display: none; } /* optional: hide on small screens */
+}
+

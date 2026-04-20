@@ -1,0 +1,31 @@
+.bookingsCard { background: #fff; border: 1px solid #e8eef6; border-radius: 16px; padding: 16px; }
+.bookingsCard--error { color: #b42318; }
+.bookingsCard__header { display:flex; gap:12px; align-items:center; justify-content:space-between; margin-bottom: 12px; }
+.bookingsCard__title { font-weight: 950; color:#0f172a; }
+.bookingsCard__sub { color:#64748b; font-weight:700; font-size: 12px; }
+.bookingsCard__search { height: 38px; min-width: 240px; padding: 0 12px; border: 1px solid #e2e8f0; border-radius: 10px; outline: none; }
+.bookingsCard__empty { padding: 14px; border: 1px dashed #e8eef6; border-radius: 14px; background: #f8fafc; color:#64748b; font-weight:700; }
+
+.bookingsTableWrap { overflow:auto; }
+.bookingsTable { width:100%; border-collapse: collapse; }
+.bookingsTable th { text-align:left; font-size:12px; color:#64748b; padding: 10px 8px; border-bottom: 1px solid #eef2f7; }
+.bookingsTable td { padding: 12px 8px; border-bottom: 1px solid #f1f5f9; vertical-align: top; }
+.cellMain { font-weight: 900; color:#0f172a; }
+.cellSub { font-size: 12px; color:#64748b; font-weight:700; margin-top: 2px; }
+
+.btn { height: 32px; padding: 0 10px; border-radius: 10px; border: 1px solid #dbe6ff; background: #fff; font-weight: 900; cursor:pointer; }
+.btn--secondary { color:#1d4ed8; }
+
+.statusPill { display:inline-flex; height: 24px; align-items:center; padding: 0 10px; border-radius: 999px; font-size: 11px; font-weight: 950; border: 1px solid #e2e8f0; background:#f8fafc; color:#0f172a; }
+.statusPill--confirmed { background:#ecfdf3; border-color:#abefc6; color:#067647; }
+
+.detailsRow td { background:#fafcff; }
+.detailsGrid { display:grid; grid-template-columns: repeat(4, minmax(160px, 1fr)); gap: 12px; padding: 8px 0; }
+.detailsLabel { font-size: 11px; color:#64748b; font-weight: 900; }
+.detailsValue { color:#0f172a; font-weight: 800; word-break: break-word; }
+
+@media (max-width: 900px) {
+  .detailsGrid { grid-template-columns: repeat(2, minmax(160px, 1fr)); }
+  .bookingsCard__header { flex-direction: column; align-items: stretch; }
+  .bookingsCard__search { min-width: 0; width: 100%; }
+}

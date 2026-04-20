@@ -1,0 +1,269 @@
+.findResources {
+  margin-top: 18px;
+}
+
+.findResources__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.findResources__title {
+  font-size: 16px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.findResources__meta {
+  font-size: 12px;
+  font-weight: 800;
+  color: #64748b;
+}
+
+.findResources__filters {
+  border: 1px solid #e8eef6;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.findResources__advanced {
+  grid-column: 1 / -1;
+  margin-top: 8px;
+  padding-top: 10px;
+  border-top: 1px solid #eef2f7;
+  display: grid;
+  gap: 10px;
+}
+
+.findResources__advancedRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 0.9fr 0.9fr 0.7fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.findResources__input {
+  height: 40px;
+  border: 1px solid #e8eef6;
+  border-radius: 12px;
+  padding: 0 12px;
+  font-size: 13px;
+  outline: none;
+  background: #f9fbff;
+  color: #0f172a;
+}
+
+.findResources__input:focus {
+  border-color: #b8ccff;
+  box-shadow: 0 0 0 4px rgba(26, 92, 255, 0.12);
+  background: #ffffff;
+}
+
+.findResources__input--wide {
+  width: 100%;
+}
+
+.findResources__input--small {
+  width: 84px;
+  padding: 0 10px;
+}
+
+.findResources__btn {
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 12px;
+  border: 0;
+  background: #1a5cff;
+  color: #ffffff;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.findResources__btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.findResources__check {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 800;
+  color: #0f172a;
+  white-space: nowrap;
+}
+
+.findResources__error {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #fecaca;
+  background: #fef2f2;
+  color: #991b1b;
+  font-size: 13px;
+}
+
+.findResources__pager {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.findResources__pagerLeft {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.findResources__pagerRight {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.findResources__pagerBtn {
+  height: 34px;
+  padding: 0 12px;
+  border-radius: 12px;
+  border: 1px solid #e8eef6;
+  background: #ffffff;
+  font-weight: 900;
+  color: #0f172a;
+  cursor: pointer;
+}
+
+.findResources__pagerBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.findResources__pagerInfo {
+  font-size: 12px;
+  font-weight: 900;
+  color: #64748b;
+}
+
+.findResources__pagerLabel {
+  font-size: 12px;
+  font-weight: 900;
+  color: #64748b;
+}
+
+.findResources__list {
+  margin-top: 12px;
+  border: 1px solid #e8eef6;
+  border-radius: 16px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.findResources__row {
+  display: grid;
+  grid-template-columns: 140px 1fr 180px;
+  gap: 14px;
+  padding: 14px;
+  border-top: 1px solid #eef2f7;
+  cursor: pointer;
+}
+
+.findResources__row:first-child {
+  border-top: 0;
+}
+
+.findResources__thumb {
+  height: 86px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  border: 1px solid #eef2f7;
+}
+
+.findResources__body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.findResources__nameRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.findResources__badge {
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #1a5cff;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.findResources__name {
+  font-size: 16px;
+  font-weight: 900;
+  color: #0f172a;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.findResources__sub {
+  font-size: 12px;
+  font-weight: 800;
+  color: #64748b;
+}
+
+.findResources__right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.findResources__bookBtn {
+  height: 38px;
+  padding: 0 16px;
+  border-radius: 12px;
+  border: 0;
+  background: #1a5cff;
+  color: #ffffff;
+  font-weight: 900;
+  opacity: 0.7;
+}
+
+.findResources__empty {
+  padding: 14px;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+@media (max-width: 1100px) {
+  .findResources__filters {
+    grid-template-columns: 1fr 1fr;
+  }
+  .findResources__advancedRow {
+    grid-template-columns: 1fr 1fr;
+  }
+  .findResources__row {
+    grid-template-columns: 120px 1fr;
+  }
+  .findResources__right {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+  }
+}
