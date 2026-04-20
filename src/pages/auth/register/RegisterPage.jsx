@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { register as registerUser } from "../../../services/authApi";
 import { saveAuth } from "../../../services/authStorage";
-import "./register.css";
+import "./Register.css";
 
 function isValidEmail(value) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(value).trim());
