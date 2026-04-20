@@ -1,4 +1,4 @@
-const DEFAULT_API_BASE_URL = "http://localhost:8080";
+const DEFAULT_API_BASE_URL = "https://vertexspace-backend.onrender.com";
 
 const envBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
