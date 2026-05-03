@@ -25,15 +25,3 @@ npm run dev
 npm run build
 npm run preview
 ```
-
-## Deploy on Vercel
-
-1. Import this repository into Vercel.
-2. Keep default build settings or use:
-	- Build Command: `npm run build`
-	- Output Directory: `dist`
-3. Add environment variable:
-	- `VITE_API_BASE_URL=https://your-backend-domain`
-4. Deploy.
-
-SPA rewrites are configured in `vercel.json` so React Router routes work on refresh and direct URL access.
